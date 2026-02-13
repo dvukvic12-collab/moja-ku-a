@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Home Vuković | Saborsko</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        header { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
+        .hero { background: #e8f5e9; padding: 60px 20px; text-align: center; border-bottom: 5px solid #2e7d32; }
+        .hero h1 { font-size: 2.5rem; color: #1b5e20; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .features { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; }
+        .card { background: #f9f9f9; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .btn { display: inline-block; background: #2e7d32; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+        .gallery-placeholder { background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Holiday Home Vuković</h1>
+    <p>Saborsko - Vaša oaza mira blizu Plitvičkih jezera</p>
+</header>
+
+<section class="hero">
+    <h1>Odmarajte tamo gdje priroda diše</h1>
+    <p>Prostrana kuća za 9 osoba s terasom, roštiljem i neprocjenjivim mirom Like.</p>
+    <a href="https://wa.me/VASS_BROJ_MOBITELA" class="btn">Rezerviraj direktno (WhatsApp)</a>
+</section>
+
+<div class="container">
+    <h2>O našem smještaju</h2>
+    <p>Uživajte u prostranosti od 95 m² s tri spavaće sobe i dvije kupaonice. Savršeno za obiteljska okupljanja ili bijeg s prijateljima.</p>
+    
+    <div class="features">
+        <div class="card">
+            <h3>Blizina Plitvica</h3>
+            <p>Samo 18 km od ulaza u najljepši nacionalni park na svijetu.</p>
+        </div>
+        <div class="card">
+            <h3>Planinski zrak</h3>
+            <p>Smješteni u Saborskom, idealnom za biciklizam i šetnje stazom "Put voda".</p>
+        </div>
+        <div class="card">
+            <h3>Potpuna oprema</h3>
+            <p>Klima, Wi-Fi, roštilj i terasa s pogledom na planine su vam na raspolaganju.</p>
+        </div>
+    </div>
+
+    <h2 style="margin-top:40px;">Galerija</h2>
+    <div class="features">
+        <div class="card"><div class="gallery-placeholder">Slika Kuće</div></div>
+        <div class="card"><div class="gallery-placeholder">Slika Terase</div></div>
+        <div class="card"><div class="gallery-placeholder">Slika Interijera</div></div>
+    </div>
+</div>
+
+<footer style="background:#2c3e50; color:white; text-align:center; padding:20px; margin-top:40px;">
+    <p>&copy; 2024 Holiday Home Vuković, Saborsko. Dobrodošli!</p>
+</footer>
+
+</body>
+</html>
