@@ -4,100 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holiday Home Vuković | Saborsko</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2d4a22; /* Šumska zelena */
-            --accent: #a67c52;  /* Boja drveta */
-            --light: #f4f7f1;
-        }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: #333; background: var(--light); }
-        
-        header { 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white; 
-            padding: 100px 20px; 
-            text-align: center; 
-        }
+        :root { --gold: #b2935b; --dark: #1a1a1a; --light: #fdfdfd; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
 
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
-        .card { 
-            background: white; 
-            padding: 0; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-            transition: transform 0.3s;
+        /* VIDEO ILI SLIKA NA VRHU */
+        .hero {
+            position: relative; height: 90vh; overflow: hidden;
+            display: flex; align-items: center; justify-content: center; color: white; text-align: center;
         }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 20px; }
-
-        .btn { 
-            display: inline-block; 
-            background: var(--accent); 
-            color: white; 
-            padding: 15px 30px; 
-            text-decoration: none; 
-            border-radius: 30px; 
-            font-weight: bold;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(166,124,82,0.3);
+        .hero video, .hero .back-img {
+            position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%;
+            transform: translate(-50%, -50%); z-index: -1; object-fit: cover;
         }
-        .btn:hover { background: #8e6a45; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 0; }
+        .hero-content { z-index: 1; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 5.5rem); margin: 0; font-weight: 400; }
 
-        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+        /* KONTEJNERI */
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; text-align: center; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 20px; font-weight: 400; }
+        .divider { width: 50px; height: 1px; background: var(--gold); margin: 20px auto 40px; }
+
+        /* GALERIJA MOZAIK */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; padding: 20px; }
+        .gallery img { width: 100%; height: 400px; object-fit: cover; border-radius: 2px; transition: 0.5s; }
+        .gallery img:hover { filter: brightness(0.8); }
+
+        /* GUMBI */
+        .btn-gold { 
+            padding: 15px 35px; border: 1px solid var(--gold); color: var(--gold); 
+            text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
+            transition: 0.4s; display: inline-block; margin: 10px;
+        }
+        .btn-gold:hover { background: var(--gold); color: white; }
+
+        footer { padding: 50px; background: #111; color: #666; font-size: 0.7rem; text-align: center; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1 style="font-size: 3rem; margin-bottom: 10px;">Holiday Home Vuković</h1>
-    <p style="font-size: 1.2rem; font-style: italic;">Mir, priroda i srce Like u Saborskom</p>
-    <a href="https://wa.me/TVOJ_BROJ" class="btn">Pošalji upit direktno</a>
-</header>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        
+        <video autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+        </video>
 
-<div class="container">
-    <section>
-        <h2>Oaza blizu Plitvica</h2>
-        <p>Smješteni u mirnom naselju Saborsko, nudimo vam savršen bijeg od gradske gužve. Naša kuća je idealna baza za istraživanje Nacionalnog parka Plitvička jezera, udaljenog svega 18 km.</p>
+        <div class="hero-content">
+            <p style="letter-spacing: 5px; text-transform: uppercase; font-size: 0.8rem;">Saborsko, Lika</p>
+            <h1>Holiday Home Vuković</h1>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <h2 class="section-title">Mir, Tišina i Tradicija</h2>
+        <div class="divider"></div>
+        <p style="max-width: 750px; margin: 0 auto; color: #555; font-size: 1.1rem; font-weight: 300;">
+            Doživite autentični odmor u srcu Like. Naša kuća nudi toplinu doma uz kamin, 
+            prostranu terasu i dječje igralište, na samo 18 km od Plitvičkih jezera.
+        </p>
     </section>
 
-    <div class="grid" style="margin-top: 50px;">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=500&q=80" alt="Interijer">
-            <div class="card-content">
-                <h3>Smještaj za 9 osoba</h3>
-                <p>3 prostrane spavaće sobe, 2 kupaonice i potpuno opremljena kuhinja za cijelu obitelj.</p>
-            </div>
-        </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=500&q=80" alt="Priroda">
-            <div class="card-content">
-                <h3>Priroda i Aktivnosti</h3>
-                <p>Uživajte u pogledu na planinu s terase ili istražite planinarsku stazu "Put voda" koja prolazi u blizini.</p>
-            </div>
-        </div>
+    <section class="gallery">
+        <img src="snijeg.jpg" alt="Kuća pod snijegom"> <img src="kamin.jpg" alt="Unutrašnjost s kaminom"> <img src="terasa.jpg" alt="Pogled s terase"> <img src="igraliste.jpg" alt="Dječje igralište"> <img src="soba.jpg" alt="Spavaća soba"> <img src="kuhinja.jpg" alt="Kuhinja"> </section>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1445013111720-992b845d7372?auto=format&fit=crop&w=500&q=80" alt="Terasa">
-            <div class="card-content">
-                <h3>Gostoprimstvo</h3>
-                <p>Gosti nas ocjenjuju visokim ocjenama zbog čistoće, mira i autentičnog ličkog doživljaja.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<footer style="background: var(--primary); color: white; text-align: center; padding: 40px; margin-top: 50px;">
-    <p>Holiday Home Vuković, Saborsko | Kontaktirajte nas putem Booking-a ili direktno.</p>
-</footer>
+    <section class="container" style="background: #f9f9f9; max-width: 100%;">
+        <h2 class="section-title" style="font-size: 2rem;">Rezervirajte Vaš Termin</h2>
+        <div class="divider"></div>
+        
+        <div style="margin-top: 30px;">
+            <a href="https://wa.me/385910000000" class="btn-gold">WhatsApp Upit</a>
+            
+            <a href="LINK_AIRBNB" class="btn-gold">Airbnb</a>
+            <a href="LINK_BOOKING" class="btn-gold">Booking.com</a>
+        </div>
+    </section>
+
+
+    <footer>
+        &copy; 2026 HOLIDAY HOME VUKOVIĆ | SABORSKO, HRVATSKA
+    </footer>
 
 </body>
 </html>
