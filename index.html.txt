@@ -4,36 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holiday Home Vuković | Saborsko</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #b2935b; --dark: #1a1a1a; --light: #fdfdfd; }
         * { box-sizing: border-box; }
         body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
 
-        /* VIDEO ILI SLIKA NA VRHU */
+        /* NASLOVNA SLIKA */
         .hero {
-            position: relative; height: 90vh; overflow: hidden;
+            position: relative; height: 80vh; overflow: hidden;
             display: flex; align-items: center; justify-content: center; color: white; text-align: center;
+            /* ZAMIJENI 'hero-slika.jpg' STVARNIM NAZIVOM TVOJE NAJLJEPŠE SLIKE */
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-slika.jpg');
+            background-size: cover; background-position: center;
         }
-        .hero video, .hero .back-img {
-            position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%;
-            transform: translate(-50%, -50%); z-index: -1; object-fit: cover;
-        }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.35); z-index: 0; }
-        .hero-content { z-index: 1; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 5.5rem); margin: 0; font-weight: 400; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 7vw, 5rem); margin: 0; }
 
-        /* KONTEJNERI */
-        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; text-align: center; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 20px; font-weight: 400; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; text-align: center; }
         .divider { width: 50px; height: 1px; background: var(--gold); margin: 20px auto 40px; }
 
-        /* GALERIJA MOZAIK */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; padding: 20px; }
-        .gallery img { width: 100%; height: 400px; object-fit: cover; border-radius: 2px; transition: 0.5s; }
-        .gallery img:hover { filter: brightness(0.8); }
+        /* GALERIJA - JEDNOSTAVNI STIL */
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+            padding: 20px; 
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 350px; 
+            object-fit: cover; 
+            border: 1px solid #eee;
+        }
 
-        /* GUMBI */
         .btn-gold { 
             padding: 15px 35px; border: 1px solid var(--gold); color: var(--gold); 
             text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
@@ -41,54 +46,43 @@
         }
         .btn-gold:hover { background: var(--gold); color: white; }
 
-        footer { padding: 50px; background: #111; color: #666; font-size: 0.7rem; text-align: center; letter-spacing: 2px; }
+        footer { padding: 40px; background: #111; color: #666; font-size: 0.7rem; text-align: center; }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <div class="hero-overlay"></div>
-        
-        <video autoplay muted loop playsinline>
-            <source src="video.mp4" type="video/mp4">
-        </video>
-
         <div class="hero-content">
             <p style="letter-spacing: 5px; text-transform: uppercase; font-size: 0.8rem;">Saborsko, Lika</p>
             <h1>Holiday Home Vuković</h1>
         </div>
     </header>
 
-
     <section class="container">
-        <h2 class="section-title">Mir, Tišina i Tradicija</h2>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin:0;">Dobrodošli</h2>
         <div class="divider"></div>
-        <p style="max-width: 750px; margin: 0 auto; color: #555; font-size: 1.1rem; font-weight: 300;">
-            Doživite autentični odmor u srcu Like. Naša kuća nudi toplinu doma uz kamin, 
-            prostranu terasu i dječje igralište, na samo 18 km od Plitvičkih jezera.
-        </p>
+        <p>Uživajte u miru Like i blizini Plitvičkih jezera.</p>
     </section>
 
-
     <section class="gallery">
-        <img src="snijeg.jpg" alt="Kuća pod snijegom"> <img src="kamin.jpg" alt="Unutrašnjost s kaminom"> <img src="terasa.jpg" alt="Pogled s terase"> <img src="igraliste.jpg" alt="Dječje igralište"> <img src="soba.jpg" alt="Spavaća soba"> <img src="kuhinja.jpg" alt="Kuhinja"> </section>
-
+        <img src="slika1.jpg" alt="Opis">
+        <img src="slika2.jpg" alt="Opis">
+        <img src="slika3.jpg" alt="Opis">
+        <img src="slika4.jpg" alt="Opis">
+        <img src="slika5.jpg" alt="Opis">
+        <img src="slika6.jpg" alt="Opis">
+    </section>
 
     <section class="container" style="background: #f9f9f9; max-width: 100%;">
-        <h2 class="section-title" style="font-size: 2rem;">Rezervirajte Vaš Termin</h2>
-        <div class="divider"></div>
-        
         <div style="margin-top: 30px;">
-            <a href="https://wa.me/385910000000" class="btn-gold">WhatsApp Upit</a>
-            
-            <a href="LINK_AIRBNB" class="btn-gold">Airbnb</a>
-            <a href="LINK_BOOKING" class="btn-gold">Booking.com</a>
+            <a href="https://wa.me/38591000000" class="btn-gold">WhatsApp Upit</a>
+            <a href="#" class="btn-gold">Airbnb</a>
+            <a href="#" class="btn-gold">Booking.com</a>
         </div>
     </section>
 
-
     <footer>
-        &copy; 2026 HOLIDAY HOME VUKOVIĆ | SABORSKO, HRVATSKA
+        &copy; 2026 HOLIDAY HOME VUKOVIĆ
     </footer>
 
 </body>
